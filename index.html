@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Auto-File-Order-Naming-順序付きファイル名生成ツール</title>
+  <link rel="stylesheet" href="styles/afon.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Team FTK <span style="color:rgb(255, 208, 1)">Auto-File-Order-Naming(順序付きファイル名生成ツール)</span></h1>
+
+    </header>
+    <nav class="nav">
+      <a href="https://github.com/renkarsu">管理人Aのgithub</a>
+      <a href="https://github.com/fujita-kota">管理人Bのgithub</a>
+      <a href="#">menu03</a>
+      <a href="#">menu04</a>
+    </nav>
+    <div class="hero">
+      <img src="images/heroarea.png" alt="ヒーローエリア" title="ソースコード" width="1250" height="300">
+    </div>
+    <section class="section01">
+      <h2>セクション１. 入力フォーム</h2>
+      ファイルとファイル名, 何番から番号を付けるか設定してください
+      <!--<form method="post" enctype="multipart/form-data">-->
+      <form>
+        <div class="InputAddOn">
+          <label>
+            <input type="file" name="upfile[]" multiple id="FileStorage">ファイルを選択
+          </label>
+        </div>
+        <div class="InputAddOn">
+          <span class="InputAddOn-item">ファイル名</span>
+          <input class="InputAddOn-field" id="fileName" required>
+        </div>
+        <div class="InputAddOn">
+          <span class="InputAddOn-item">開始番号</span>
+          <input class="InputAddOn-field" id="fileNumber" required>
+        </div>
+        <div class="InputAddOn">
+          <input type="submit" class="InputAddOn-item" id="submit" accesskey="u" onclick="download()">
+        </div>
+        <div class="InputAddOn">
+          <input type="reset" class="InputAddOn-item" id="reset">
+        </div>
+        <button type="button" id="move">順番を変更する</button>
+      </form>
+      <!--</form>-->
+    </section>
+    <section class="section02">
+      <h2>セクション2. 画像プレビュー</h2>
+      <div class="tile" id="layout-tile">
+        <div id="layoutCanvas">
+          <div>
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="sidebar">
+      Contents<br>
+      <a href="https://github.com/renkarsu">管理人Aのgithub</a><br>
+      <a href="https://github.com/fujita-kota">管理人Bのgithub</a>
+    </aside>
+    <footer class="footer">
+      <p style="text-align: center">©Copyright 2023 by FTK. All rights reversed.</p>
+    </footer>
+  </div>
+  <script src="scripts/download-naming.js"></script>
+  <script src="scripts/reset.js"></script>
+</body>
+
+</html>
